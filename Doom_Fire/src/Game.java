@@ -24,7 +24,7 @@ public class Game extends Canvas implements Runnable, KeyListener {
     private Thread thread;
     private boolean isRunning = true;
     public static final int WIDTH = 300;
-    public static final int HEIGHT = 300;
+    public static final int HEIGHT = 320;
     private final int SCALE = 3;
 
     private BufferedImage image;
@@ -77,7 +77,7 @@ public class Game extends Canvas implements Runnable, KeyListener {
     }
 
     public void tick() {
-    	//Utilizando metodo tick da classe Fogo
+    	//
     	fogo.tick();
     }
 
@@ -103,11 +103,11 @@ public class Game extends Canvas implements Runnable, KeyListener {
      
         g.setColor(Color.white);
         g.setFont(new Font("consolas" , Font.BOLD, 20));
-        g.drawString("Teste render tela" , 20, 580);
+        //g.drawString("Teste render tela" , 20, 580);
         //FIM DO RENDER
         
-        //Utilizando método render do classe fogo
-        fogo.render(g);
+        //Utilizando método render da classe fogo
+        fogo.renderFogo(g);
         
         
         bs.show();
@@ -134,7 +134,7 @@ public class Game extends Canvas implements Runnable, KeyListener {
             }
 
             if (System.currentTimeMillis() - timer >= 100) {
-              //  System.out.println("FPS: " + frames);
+                //System.out.println("FPS: " + frames);
                 frames = 0;
                 timer += 1000;
             }
