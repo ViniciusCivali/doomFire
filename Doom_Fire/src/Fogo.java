@@ -32,7 +32,7 @@ public class Fogo {
 	
 	private int temporario = 0;
 	
-	private boolean debug = false;
+	private boolean debug = true;
 	
 	/**
 	 * Função start da classe
